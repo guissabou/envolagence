@@ -1,0 +1,295 @@
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+/* En-tête */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    display: flex; /* Utilisation de flexbox */
+    justify-content: space-between; /* Espacement entre le logo et le menu */
+    align-items: center; /* Centrer les éléments verticalement */
+}
+
+.logo img {
+    width: 50px; /* Ajustez la largeur du logo selon vos besoins */
+    height: auto;
+    padding-left: 150px;
+}
+
+/* Menu principal */
+.main-menu {
+    background-color: #004080;
+    padding-right: 70px;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Affiche les éléments de menu sur une ligne */
+}
+
+.main-menu > ul > li {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px; /* Ajoutez de l'espace autour des éléments de menu */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #003366;
+    position: relative; /* Nécessaire pour les sous-menus */
+}
+
+.main-menu ul ul {
+    display: none; /* Les sous-menus sont cachés par défaut */
+    position: absolute; /* Positionnement absolu par rapport à l'élément parent */
+    background-color: #003366;
+    top: 100%; /* Positionnez le sous-menu juste en dessous de l'élément parent */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Assurez-vous que le sous-menu est au-dessus d'autres éléments */
+}
+
+.main-menu ul li:hover > ul {
+    display: block; /* Affiche les sous-menus au survol */
+}
+
+.main-menu ul ul li {
+    padding: 5px;
+    color: #ffffff;
+    border-bottom: 1px solid #005599;
+    text-align: center;
+}
+
+.main-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.main-menu li:hover {
+    background-color: #004080;
+}
+
+/* Section de recherche */
+.search-section {
+    text-align: center;
+    padding: 12%;
+    background-image: url('images/IMG2.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.search-section h1 {
+    color: #004080;
+}
+
+.search-section form {
+    margin-top: 20px;
+}
+
+.search-section input, .search-section button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Destinations populaires */
+.popular-destinations {
+    padding: 20px;
+    text-align: center;
+}
+
+.popular-destinations h2 {
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+/* Conteneur pour le grid des destinations */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    gap: 20px;
+    text-align: center;
+}
+
+.destination {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.destination img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+.partner-section {
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+}
+
+.partner-section h2 {
+    color: #004080;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.partner-slider {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide-item {
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slick-slide {
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+}
+
+.slick-center {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Pied de page */
+
+.footer {
+    background-color: #004080;
+    padding: 40px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.logo-section {
+    text-align: center;
+}
+
+.logo-section img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-column h4 {
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer-column h4:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 30px;
+    height: 3px;
+    background-color: #ff6600;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #004080;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer-column button[type="submit"] {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-column button[type="submit"]:hover {
+    background-color: #e05500;
+}
+
+.footer-bottom {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
